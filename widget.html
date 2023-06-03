@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="awesomplete.css" />
+<script src="awesomplete.js" async></script>
+
+<input class="awesomplete" list="nhlterms" id="myInput" />
+<datalist id="nhlterms">
+	<option>Anaheim Ducks</option>
+	<option>Dallas Eakins</option>
+	<option>Honda Center</option>
+	<option>Mighty Ducks</option>
+	<option>Gage Alexander</option>
+	<option>Nathan Beaulieu</option>
+	<option>Simon Benoit</option>
+	<option>Sam Carrick</option>
+	<option>Max Comtois</option>
+	<option>Lukas Dostal</option>
+	<option>Jamie Drysdale</option>
+	<option>Cam Fowler</option>
+	<option>John Gibson</option>
+	<option>Derek Grant</option>
+	<option>Scott Harrington</option>
+	<option>Adam Henrique</option>
+	<option>Max Jones</option>
+	<option>Jackson LaCombe</option>
+	<option>Brett Leason</option>
+	<option>Isac Lundestrom</option>
+	<option>Brock McGinn</option>
+	<option>Mason McTavish</option>
+	<option>Jayson Megna</option>
+	<option>Nikita Nesterenko</option>
+	<option>Kevin Shattenkirk</option>
+	<option>Jakob Silfverberg</option>
+	<option>Anthony Stolarz</option>
+	<option>Ryan Strome</option>
+	<option>Troy Terry</option>
+	<option>Urho Vaakanainen</option>
+	<option>Frank Vatrano</option>
+	<option>Trevor Zegras</option>
+	<option>Colton White</option>
+</datalist>
+
+<button onclick="myFunction()" style="font-size: 75%"><b>GO</b></button>
+<br>
+<iframe id="ifrm" src="about:blank" width="100%" height="100%" style="border:none;">
+</iframe>
+<p id="search"></p>
+
+<script>
+function myFunction() {
+    var nhl = document.getElementById("myInput").value;
+
+	switch(nhl) {
+		// Anaheim Ducks
+	    case "Anaheim Ducks":
+	    case "Dallas Eakins":
+	    case "Honda Center":
+	    case "Mighty Ducks":
+	    case "Gage Alexander":
+	    case "Nathan Beaulieu":
+	    case "Simon Benoit":
+	    case "Sam Carrick":
+	    case "Max Comtois":
+	    case "Lukas Dostal":
+	    case "Jamie Drysdale":
+	    case "Cam Fowler":
+		case "John Gibson":
+	    case "Derek Grant":
+	    case "Scott Harrington":
+	    case "Adam Henrique":
+	    case "Max Jones":
+	    case "Jackson LaCombe":
+	    case "Brett Leason":
+	    case "Isac Lundestrom":
+	    case "Brock McGinn":
+	    case "Mason McTavish":
+	    case "Jayson Megna":
+	    case "Nikita Nesterenko":
+	    case "Kevin Shattenkirk":
+	    case "Jakob Silfverberg":
+	    case "Anthony Stolarz":
+	    case "Ryan Strome":
+	    case "Troy Terry":
+	    case "Urho Vaakanainen":
+	    case "Frank Vatrano":
+	    case "Trevor Zegras":
+	    case "Colton White":
+   			ifrm.setAttribute("src", "ducks.html");
+		break;
+
+		default:
+   			document.body.removeChild(ifrm);
+			text = "Sorry, don't know that one.";
+    }
+    document.getElementById("search").innerHTML = text;
+}
+</script>
