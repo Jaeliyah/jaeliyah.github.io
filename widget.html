@@ -87,8 +87,7 @@ function myFunction() {
 		break;
 
 		default:
-   			document.body.removeChild(ifrm);
-			text = "Sorry, don't know that one.";
+   			ifrm.setAttribute("src", "error.html");
     }
     document.getElementById("search").innerHTML = text;
 }
