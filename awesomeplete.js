@@ -29,7 +29,7 @@ var _ = function (input, o) {
 	this.options = o = o || {};
 
 	configure(this, {
-		minLength: 2,
+		minChars: 2,
 		maxItems: 10,
 		autoFirst: false,
 		data: _.DATA,
