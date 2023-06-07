@@ -1,1 +1,237 @@
+<script src="sort.js" async></script>
 
+<style>
+	tr:nth-child(even) {
+	background-color: #ebebeb;
+	}
+
+	body {
+	font: 14px helvetica;
+	}
+</style>
+
+<b style="font-size: 135%;">***</b>
+<br><br>
+<b style="font-size: 85%;">Head Coach:</b> ***
+<br>
+<b style="font-size: 85%;">Home Ice:</b> ***
+<br>
+<b style="font-size: 85%;">Nickname:</b> ***
+<br><br>
+<i style="font-size: 85%;">Click column header to sort.</i>
+<table id="roster">
+	<tr> 
+    	<th onclick="sortTable(0)">Number</th>
+    	<th onclick="sortTable(1)">First Name</th>
+    	<th onclick="sortTable(2)">Last Name</th>
+    	<th onclick="sortTable(3)">Slot</th>
+	</tr>
+
+	<tr>
+		<td>44</td>
+		<td>Mikey</td>
+		<td>Anderson</td>
+		<td>defense</td>
+	</tr>
+	<tr>
+		<td>28</td>
+		<td>Jaret</td>
+		<td>Anderson-Dolan</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>33</td>
+		<td>Viktor</td>
+		<td>Arvidsson</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Tobias</td>
+		<td>Bjornfot</td>
+		<td>defense</td>
+	</tr>
+	<tr>
+		<td>55</td>
+		<td>Quinton</td>
+		<td>Byfield</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>92</td>
+		<td>Brandt</td>
+		<td>Clarke</td>
+		<td>defense</td>
+	</tr>
+	<tr>
+		<td>29</td>
+		<td>Pheonix</td>
+		<td>Copley</td>
+		<td>goalie</td>
+	</tr>
+	<tr>
+		<td>24</td>
+		<td>Phillip</td>
+		<td>Danault</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Drew</td>
+		<td>Doughty</td>
+		<td>defense</td>
+	</tr>
+	<tr>
+		<td>50</td>
+		<td>Sean</td>
+		<td>Durzi</td>
+		<td>defense</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Alexander</td>
+		<td>Edler</td>
+		<td>defense</td>
+	</tr>
+	<tr>
+		<td>22</td>
+		<td>Kevin</td>
+		<td>Fiala</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>84</td>
+		<td>Vladislav</td>
+		<td>Gavrikov</td>
+		<td>defense</td>
+	</tr>
+	<tr>
+		<td>91</td>
+		<td>Carl</td>
+		<td>Grundstrom</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Samuel</td>
+		<td>Helenius</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Alex</td>
+		<td>Iafallo</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>34</td>
+		<td>Arthur</td>
+		<td>Kaliyev</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Adrian</td>
+		<td>Kempe</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Anze</td>
+		<td>Kopitar</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>70</td>
+		<td>Joonas</td>
+		<td>Korpisalo</td>
+		<td>goalie</td>
+	</tr>
+	<tr>
+		<td>89</td>
+		<td>Rasmus</td>
+		<td>Kupari</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>78</td>
+		<td>Alex</td>
+		<td>Laferriere</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Andre</td>
+		<td>Lee</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>46</td>
+		<td>Blake</td>
+		<td>Lizotte</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Zack</td>
+		<td>MacEwen</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Trevor</td>
+		<td>Moore</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>57</td>
+		<td>Jacob</td>
+		<td>Moverare</td>
+		<td>defense</td>
+	</tr>
+	<tr>
+		<td>40</td>
+		<td>Cal</td>
+		<td>Petersen</td>
+		<td>goalie</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Francesco</td>
+		<td>Pinelli</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Erik</td>
+		<td>Portillo</td>
+		<td>goalie</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Matt</td>
+		<td>Roy</td>
+		<td>defense</td>
+	</tr>
+	<tr>
+		<td>53</td>
+		<td>Spence</td>
+		<td>Jordan</td>
+		<td>defense</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Gabriel</td>
+		<td>Vilardi</td>
+		<td>offense</td>
+	</tr>
+	<tr>
+		<td>26</td>
+		<td>Sean</td>
+		<td>Walker</td>
+		<td>defense</td>
+	</tr>
+
+</table>
+<script src="sort.js" async></script>
+</div>
