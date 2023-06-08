@@ -1,19 +1,28 @@
 tr:nth-child(even) {
-  background-color: #ebebeb;
+background-color: #ebebeb;
+}
+
+h1 {
+font: bold 20px helvetica;
 }
 
 body {
-  font-family: helvetica;
+font: 14px helvetica;
 }
 
-p.a {
-  font: bold 14px
+div.a {
+font: bold 13px helvetica;
 }
 
-p.b {
-  font-weight: bold 10px
+div.b {
+font: italic 12px helvetica;
 }
 
-p.c {
-  font: italic 10px
+table.myFormat tr td {
+font-variant: small-caps;
+font-size: 12px
+}
+
+table.myFormat th {
+font-size: 14px;
 }
