@@ -1,32 +1,22 @@
+<link rel="stylesheet" href="style2.css" />
 <script src="sort.js" async></script>
 
-<style>
-	tr:nth-child(even) {
-	background-color: #ebebeb;
-	}
-
-	body {
-	font: 14px helvetica;
-	}
-</style>
-
-<p1>Anaheim Ducks</p1>
+<h1>Anaheim Ducks</h1>
+<div class="a">Head Coach:</div>Greg Cronin
 <br><br>
-<p2>Head Coach:</p2> Greg Cronin
-<br>
-<p2>Home Ice:</p2> Honda Center
-<br>
-<p2>Nickname:</p2> Mighty Ducks
+<div class="a">Home Ice:</div>Honda Center
 <br><br>
-<p3>Click column header to sort.</p3>
+<div class="a">Nickname:</div>Mighty Ducks
+<br><br>
+<div class="b">Click column header to sort.</div>
 
-<table>
-	<tr> 
-    	<th onclick="sortTable(0)">Number</th>
-    	<th onclick="sortTable(1)">First Name</th>
-    	<th onclick="sortTable(2)">Last Name</th>
-    	<th onclick="sortTable(3)">Slot</th>
-	</tr>
+<table class="myformat" id="roster">
+    <tr>
+        <th onclick="sortTable(0)">Number</th>
+        <th onclick="sortTable(1)">First Name</th>
+        <th onclick="sortTable(2)">Last Name</th>
+        <th onclick="sortTable(3)">Slot</th>
+    </tr>
 
 	<tr>
 		<td>79</td>
