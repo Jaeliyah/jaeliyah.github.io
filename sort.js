@@ -10,25 +10,32 @@
       shouldSwitch = false;
       x = rows[i].getElementsByTagName("TD")[n];
       y = rows[i + 1].getElementsByTagName("TD")[n];
-          var xContent = (isNaN(x.innerHTML)) 
-              ? (x.innerHTML.toLowerCase() === '-')
-                    ? 0 : x.innerHTML.toLowerCase()
-              : parseFloat(x.innerHTML);
-          var yContent = (isNaN(y.innerHTML)) 
-              ? (y.innerHTML.toLowerCase() === '-')
-                    ? 0 : y.innerHTML.toLowerCase()
-              : parseFloat(y.innerHTML);
-          if (dir == "asc") {
-              if (xContent > yContent) {
-                  shouldSwitch= true;
-                  break;
-              }
-          } else if (dir == "desc") {
-              if (xContent < yContent) {
-                  shouldSwitch= true;
-                  break;
-              }
+        var xContent = (isNaN(x.innerHTML)) 
+          ? (x.innerHTML.toLowerCase() === '-')
+            ? 0 : x.innerHTML.toLowerCase()
+          : parseFloat(x.innerHTML);
+        var yContent = (isNaN(y.innerHTML)) 
+          ? (y.innerHTML.toLowerCase() === '-')
+            ? 0 : y.innerHTML.toLowerCase()
+          : parseFloat(y.innerHTML);
+
+if (x.innerHTML == "" && dir == "asc") {
+  x.innerHTML = "999";
+  x.style.color = "rgba(0, 0, 0, 0)";
+}
+
+        if (dir == "asc") {
+          if (xContent > yContent) {
+            shouldSwitch= true;
+            break;
           }
+        }
+        else if (dir == "desc") {
+          if (xContent < yContent) {
+            shouldSwitch= true;
+            break;
+          }
+        }
       }
     if (shouldSwitch) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
