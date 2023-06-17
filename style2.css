@@ -3,19 +3,19 @@ background-color: #ebebeb;
 }
 
 h1 {
-font: bold 20px helvetica;
+font: bold 20px Verdana;
 }
 
 body {
-font: 14px helvetica;
+font: 14px Verdana;
 }
 
 div.a {
-font: bold 13px helvetica;
+font: bold 13px Verdana;
 }
 
 div.b {
-font: italic 12px helvetica;
+font: italic 12px Verdana;
 }
 
 table.myFormat tr td {
